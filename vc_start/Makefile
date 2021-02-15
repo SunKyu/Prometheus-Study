@@ -8,4 +8,4 @@ run_grafana:
 	docker run -p 3000:3000 grafana/grafana
 
 test:
-	cat $(CONFIG_PATH)
+	ls $(CONFIG_PATH)
