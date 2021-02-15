@@ -5,7 +5,7 @@ helm-repo-update:
 	helm repo add vm https://victoriametrics.github.io/helm-charts/
 	helm repo update
 
-helm-chart-install: make-helm-chart make-namespace
+helm-chart-install:
 	helm install victoria-metrics vm/victoria-metrics-cluster -f values.yaml -n $(NAMESPACE)
 
 helm-chart-install-test: make-helm-chart make-namespace
